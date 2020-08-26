@@ -8,10 +8,8 @@ from pystreamable import StreamableApi
 from fake_useragent import UserAgent
 
 def upload_to_streamable(path):
-    # export username=concueta
-    # export password=4562433Ss
-    username = "concueta"
-    password = "4562433Ss"
+    username = os.environ.get("username")
+    password = os.environ.get("password")
     api = StreamableApi(username, password)
     deets = api.upload_video(path, path.split('/')[-1])
     count = 0
@@ -27,17 +25,11 @@ def upload_to_streamable(path):
     return "https://streamable.com/" +deets['shortcode']
 
 def upload_to_reddit(url='https://streamable.com/6ws17r'):
-    # export username=concueta
-    # export password=4562433Ss
-    # export subreddit=leagueoflegends
-    # export reddit_id=ps2XmeHmNwaP2g
-    # export reddit_secret=OSxpjcizyXRovExi9VZ_y2n6Ihc
-    # export subreddit=leagueoflegends
-    username = "concueta"
-    password = "4562433Ss"
-    reddit_id = "ps2XmeHmNwaP2g"
-    reddit_secret = "OSxpjcizyXRovExi9VZ_y2n6Ihc"
-    subreddit = "leagueoflegends"
+    username = os.environ.get("username")
+    password = os.environ.get("password")
+    reddit_id = os.environ.get("reddit_id")
+    reddit_secret = os.environ.get("reddit_secret")
+    subreddit = os.environ.get("subreddit")"
     ua = UserAgent()
     user_agent = ua.random
     reddit = praw.Reddit(client_secret = reddit_secret,
