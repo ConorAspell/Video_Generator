@@ -1,0 +1,9 @@
+export number_of_videos=1
+export game=League%20of%20Legends
+export twitch_id=022i90v7stu8i3u71otlf5xxa6w8si
+export username=concueta
+export password=4562433Ss
+export subreddit=leagueoflegends
+export reddit_id=ps2XmeHmNwaP2g
+export reddit_secret=OSxpjcizyXRovExi9VZ_y2n6Ihc
+export subreddit=leagueoflegends
