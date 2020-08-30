@@ -6,15 +6,16 @@ import time
 import os
 
 def get_videos():
-    # number_of_videos = os.environ.get("number_of_videos")
-    # mode = os.environ.get("mode")
-    # key = os.environ.get("key")
-    # twitch_id = os.environ.get("twitch_id")
-    number_of_videos = 2
-    mode = "game"
-    key = "chess"
-    twitch_id = "022i90v7stu8i3u71otlf5xxa6w8si"
-    url="https://api.twitch.tv/kraken/clips/top?limit="+str(number_of_videos)+"&"+mode+"="+key+"&period=week"
+    number_of_videos = os.environ.get("number_of_videos")
+    mode = os.environ.get("mode")
+    key = os.environ.get("key")
+    period = os.environ.get("period")
+    twitch_id = os.environ.get("twitch_id")
+    # number_of_videos = 2
+    # mode = "game"
+    # key = "chess"
+    # twitch_id = "022i90v7stu8i3u71otlf5xxa6w8si"
+    url="https://api.twitch.tv/kraken/clips/top?limit="+str(number_of_videos)+"&"+mode+"="+key+"&period="+str(period)
     referrer = "google.ie"
     client_id = twitch_id
     headers = {
